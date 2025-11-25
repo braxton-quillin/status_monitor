@@ -19,4 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('dashboard/', views.ui, name='dashboard')
+    path('add-appliance/', views.add_appliance, name='add_appliance'),
 ]

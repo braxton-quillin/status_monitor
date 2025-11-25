@@ -1,0 +1,15 @@
+<h2>Appliance Dashboard</h2>
+<div class="appliance-grid">
+    {% for appliance in appliances %}
+    <div class=""appliance-card">
+        <h3>{{ appliance.name }}</h3>
+        <p><strong>Service Date:</strong> {{ appliance.service_date }}</p>
+        <p><strong>Model:</strong> {{ appliance.model_number }}</p>
+        <p><strong>Serial:</strong> {{ appliance.serial_number }}</p>
+        <p><strong>Location:</strong> {{ appliance.location }}</p>
+        <p><strong>Kit:</strong> {{ appliance.kit }}</p>
+        <p><strong>Service Repeat:</strong> {{ appliance.service_repeat }}</p>
+        <p><strong>Notified:</strong>{{ appliance.notifieed }}</p>
+    </div>
+    {% endfor %}
+</div>
