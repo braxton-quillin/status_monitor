@@ -125,7 +125,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CRONJOBS = [
-    # Run every day at 8:00 AM
+    # send notifs 8am every day server running
     ("0 8 * * *", "django.core.management.call_command", ["send_notifs"]),
 ]
 
