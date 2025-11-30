@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django_crontab",
     "notifier",
     "Smart_Load_Health_Monitor",
+    "dashboard_ui",
 ]
 
 MIDDLEWARE = [

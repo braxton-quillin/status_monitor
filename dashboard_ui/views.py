@@ -1,13 +1,13 @@
-from django.shortcuts import render
-from .models import Appliance 
-
-def dashboard(request):
-    appliances = Appliance.objetcs.all()
-    return render(request, 'dashboard.html', {'appliances': appliances})
-
-# views.py
 from django.shortcuts import render, redirect
+from Smart_Load_Health_Monitor.models import Appliance
 from .forms import ApplianceForm
+
+def home(request):
+    return redirect('dashboard')
+
+def ui(request):
+    appliances = Appliance.objects.all()
+    return render(request, 'ui.html', {'appliances': appliances})
 
 def add_appliance(request):
     if request.method == 'POST':

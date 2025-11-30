@@ -1,15 +1,16 @@
 <h2>Appliance Dashboard</h2>
+<a href="{% url 'add_appliance' %}" class="btn btn-primary mb-3">Add New Appliance</a>
 <div class="appliance-grid">
     {% for appliance in appliances %}
-    <div class=""appliance-card">
-        <h3>{{ appliance.name }}</h3>
+    <div class="appliance-card">
+        <h3>{{ appliance.appliance }}</h3>
         <p><strong>Service Date:</strong> {{ appliance.service_date }}</p>
-        <p><strong>Model:</strong> {{ appliance.model_number }}</p>
-        <p><strong>Serial:</strong> {{ appliance.serial_number }}</p>
+        <p><strong>Model:</strong> {{ appliance.model }}</p>
+        <p><strong>Serial:</strong> {{ appliance.serial }}</p>
         <p><strong>Location:</strong> {{ appliance.location }}</p>
         <p><strong>Kit:</strong> {{ appliance.kit }}</p>
         <p><strong>Service Repeat:</strong> {{ appliance.service_repeat }}</p>
-        <p><strong>Notified:</strong>{{ appliance.notifieed }}</p>
+        <p><strong>Notified:</strong> {{ appliance.notified }}</p>
     </div>
     {% endfor %}
 </div>
